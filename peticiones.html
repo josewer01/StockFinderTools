@@ -271,9 +271,9 @@ function aceptaPeticion(buttonId){
  if(findItemById.value == undefined){
 
  }else{
-  // Send POST request (Replace "your-api-endpoint" with your actual endpoint)
+  
   fetch("https://proyectotiendas1.azurewebsites.net/aceptarsolicitud?donante="+findItemById(tiendaNombre).value, {
-    method: "POST",
+    method: "PUT",
     headers: {
       "Content-Type": "application/json"
     },
