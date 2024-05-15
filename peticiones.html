@@ -272,7 +272,7 @@ function aceptaPeticion(buttonId){
   alert("Introduzca un donante");
  }else{
   
-  fetch("https://proyectotiendas1.azurewebsites.net/aceptarsolicitud?donante="+findItemById(tiendaNombre).value, {
+  fetch("https://proyectotiendas1.azurewebsites.net/aceptarsolicitud?donante="+document.getElementById("tiendaNombre").value, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json"
