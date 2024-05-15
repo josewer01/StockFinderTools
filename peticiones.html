@@ -277,7 +277,7 @@ function aceptaPeticion(buttonId){
     headers: {
       "Content-Type": "application/json"
     },
-    body: solicitud
+    body:  JSON.stringify(solicitud)
   })
   .then(response => {
     if (!response.ok) {
