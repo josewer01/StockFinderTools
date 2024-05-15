@@ -268,8 +268,8 @@ function borraPeticion(buttonId) {
 function aceptaPeticion(buttonId){
  var solicitud = findItemById(buttonId); //Mandamos este JSON
 
- if(findItemById(tiendaNombre).value == undefined){
-
+ if(document.getElementById("tiendaNombre").value == undefined){
+  alert("Introduzca un donante");
  }else{
   
   fetch("https://proyectotiendas1.azurewebsites.net/aceptarsolicitud?donante="+findItemById(tiendaNombre).value, {
@@ -286,6 +286,7 @@ function aceptaPeticion(buttonId){
     return response;
   })
   .then(data => {
+    alert("Petición aceptada");
     console.log("Success:", data);
     location.reload();
   })
